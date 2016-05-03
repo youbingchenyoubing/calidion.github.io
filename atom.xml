@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.3gcnbeta.com/"/>
-  <updated>2016-05-02T11:01:02.228Z</updated>
+  <updated>2016-05-03T15:11:17.174Z</updated>
   <id>http://blog.3gcnbeta.com/</id>
   
   <author>
@@ -14,6 +14,70 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>关于MVC、前端、后端、前后端分离、前后端同构的那些事</title>
+    <link href="http://blog.3gcnbeta.com/2016/05/03/%E5%85%B3%E4%BA%8EMVC%E3%80%81%E5%89%8D%E7%AB%AF%E3%80%81%E5%90%8E%E7%AB%AF%E3%80%81%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB%E3%80%81%E5%89%8D%E5%90%8E%E7%AB%AF%E5%90%8C%E6%9E%84%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B/"/>
+    <id>http://blog.3gcnbeta.com/2016/05/03/关于MVC、前端、后端、前后端分离、前后端同构的那些事/</id>
+    <published>2016-05-03T15:00:30.000Z</published>
+    <updated>2016-05-03T15:11:17.174Z</updated>
+    
+    <content type="html">&lt;p&gt;关于MVC，前后端，以及前后端分离，还有前后端同构的问题其实我已经分析的非常清楚了。&lt;br&gt;但是为了能够让所有人更加系统的从各个角度理解他们之间的关系，我在这边再重新总结，并提合并成一篇文章。&lt;/p&gt;
+&lt;p&gt;理解所有这些问题，首先要搞清楚的是：&lt;/p&gt;
+&lt;h3 id=&quot;前后端是Web前后端&quot;&gt;&lt;a href=&quot;#前后端是Web前后端&quot; class=&quot;headerlink&quot; title=&quot;前后端是Web前后端&quot;&gt;&lt;/a&gt;前后端是Web前后端&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;不是项目前后端&lt;/li&gt;
+&lt;li&gt;也不是服务器前后端&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;我们通常所说的前后端是特指Web的前后端。&lt;br&gt;他不是项目的前后端，也不是服务器的前后端。&lt;br&gt;因为对于Web来讲，前后端是确定的。&lt;br&gt;前端就是前端，后端就是后端，并不存在分离的问题。&lt;br&gt;所以我们得到第二个重点。&lt;/p&gt;
+&lt;h3 id=&quot;不存在前后端分离的问题。如果有，那都是MVC分离&quot;&gt;&lt;a href=&quot;#不存在前后端分离的问题。如果有，那都是MVC分离&quot; class=&quot;headerlink&quot; title=&quot;不存在前后端分离的问题。如果有，那都是MVC分离&quot;&gt;&lt;/a&gt;不存在前后端分离的问题。如果有，那都是MVC分离&lt;/h3&gt;&lt;p&gt;同时大多数的所谓前后端分离，实际上都是错误的。&lt;br&gt;而本质上这些所谓分离都是MVC的分离。&lt;/p&gt;
+&lt;h3 id=&quot;前后端存在着同构化，而不是分离&quot;&gt;&lt;a href=&quot;#前后端存在着同构化，而不是分离&quot; class=&quot;headerlink&quot; title=&quot;前后端存在着同构化，而不是分离&quot;&gt;&lt;/a&gt;前后端存在着同构化，而不是分离&lt;/h3&gt;&lt;p&gt;对于以后的Web来说，不需要分离，而是需要合并的。这种趋势在Nodejs出来后显得越来越显著。目前已经有很多Nodejs的库是前后端共通的，也就是所谓的前后端统一或者同构（即英文里的isomorphic js）。&lt;/p&gt;
+&lt;p&gt;当有象JS这种前后端两栖的语言出现时就促成了前后端的同构。&lt;/p&gt;
+&lt;p&gt;所以我们可以看到并不存在前后端分离，但是存在MVC的分离。&lt;br&gt;前后端存在的现象是代码共享，即前后端同构。&lt;/p&gt;
+&lt;h3 id=&quot;Web-Assembly将会进一步促进前后端同构&quot;&gt;&lt;a href=&quot;#Web-Assembly将会进一步促进前后端同构&quot; class=&quot;headerlink&quot; title=&quot;Web Assembly将会进一步促进前后端同构&quot;&gt;&lt;/a&gt;Web Assembly将会进一步促进前后端同构&lt;/h3&gt;&lt;p&gt;由于新技术Web Assembly的推出，未来会有更多的语言可以在浏览器端执行，所以支持前后端同构的方案与语言将会越来越丰富。&lt;/p&gt;
+&lt;p&gt;下面列举出一些相关文章，用于深入的理解这个问题：&lt;/p&gt;
+&lt;h4 id=&quot;前端与后端是如何区分的？&quot;&gt;&lt;a href=&quot;#前端与后端是如何区分的？&quot; class=&quot;headerlink&quot; title=&quot;前端与后端是如何区分的？&quot;&gt;&lt;/a&gt;前端与后端是如何区分的？&lt;/h4&gt;&lt;p&gt;讨论文章：&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://blog.3gcnbeta.com/2015/02/24/Web开发的前端与后端的界线在那里？/&quot;&gt;Web开发的前端与后端的界线在那里？&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;结论：通过运行环境区分：浏览器端运行的内容是前端，服务器端运行的内容是后端&lt;/p&gt;
+&lt;p&gt;结论：通过运行环境区分：浏览器端运行的内容是前端，服务器端运行的内容是后端&lt;/p&gt;
+&lt;h4 id=&quot;MVC与前后端有什么关系？&quot;&gt;&lt;a href=&quot;#MVC与前后端有什么关系？&quot; class=&quot;headerlink&quot; title=&quot;MVC与前后端有什么关系？&quot;&gt;&lt;/a&gt;MVC与前后端有什么关系？&lt;/h4&gt;&lt;p&gt;讨论文章： &lt;a href=&quot;https://github.com/calidion/calidion.github.io/issues/3&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/calidion/calidion.github.io/issues/3&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;结论： MVC可以存在于前端，也可以存在于后端。 &lt;/p&gt;
+&lt;h4 id=&quot;前后端分离的问题存在吗？&quot;&gt;&lt;a href=&quot;#前后端分离的问题存在吗？&quot; class=&quot;headerlink&quot; title=&quot;前后端分离的问题存在吗？&quot;&gt;&lt;/a&gt;前后端分离的问题存在吗？&lt;/h4&gt;&lt;p&gt;讨论文章：&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://blog.3gcnbeta.com/2016/03/31/不存在前后端分离的问题/&quot;&gt;并不存在前后端分离的问题&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;结论：并不存在前后端分离的问题，因为前后端是天然分离的，基于结论1,。引出一个新的话题，那就是前后端同构。未来的Web技术更多的是合并，而不是分离。&lt;/p&gt;
+&lt;p&gt;注：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;1. 分离是神话时代就已经确立的，没有必要再说前后端分离了。
+2. 目前的所有分离都是基于MVC的分离。
+3. 现在所谓的将模板放到node而称为前后端分离的说法是完全错误的
+4. 目前前后端都有很多强大的MVC框架，而拆分MVC是永恒的话题。
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&quot;前后端同构&quot;&gt;&lt;a href=&quot;#前后端同构&quot; class=&quot;headerlink&quot; title=&quot;前后端同构&quot;&gt;&lt;/a&gt;前后端同构&lt;/h4&gt;&lt;p&gt;说明：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;JS是目前唯一的可进行前后端同构的语言&lt;/li&gt;
+&lt;li&gt;Web Assembly可以导致更多的可实现前后端同构的语言出现&lt;/li&gt;
+&lt;li&gt;目前主张前后同异的框架有: reactjs, angular2, meteor以及很多模板类，通用类库&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;结论：前后端同构是未来的一个方向，至于最终能不能成为主流，还有得时间的考验。个人预测同构与异构会长期共存，那些通用的功能将会越来越多的采用同构。&lt;/p&gt;
+&lt;h4 id=&quot;关于项目的前后端与Web的前后端&quot;&gt;&lt;a href=&quot;#关于项目的前后端与Web的前后端&quot; class=&quot;headerlink&quot; title=&quot;关于项目的前后端与Web的前后端&quot;&gt;&lt;/a&gt;关于项目的前后端与Web的前后端&lt;/h4&gt;&lt;p&gt;说明：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;我对很多人的逻辑是很无语的&lt;/li&gt;
+&lt;li&gt;已经不止有一次有人跟我说项目的前后端了&lt;/li&gt;
+&lt;li&gt;我想说项目的前后端你爱怎么划分就怎么划分，但是跟我们这里讨论的Web前后端没有半毛钱关系。&lt;/li&gt;
+&lt;li&gt;在你的项目里，你就是将MYSQL当成是项目的前端，也不关我的事。&lt;/li&gt;
+&lt;li&gt;但是，如果你想把MYSQL当成是Web的前端，那就别怪我批你，骂你。你的逻辑是体育老师教的？&lt;/li&gt;
+&lt;li&gt;再跟我提如果是项目的前后端呢的问题的，请你好好考虑你的智商是不是要充充值了？&lt;/li&gt;
+&lt;li&gt;最后请你好好区分清楚什么是Web的前后端，什么是项目的前后端。&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;关于MVC，前后端，以及前后端分离，还有前后端同构的问题其实我已经分析的非常清楚了。&lt;br&gt;但是为了能够让所有人更加系统的从各个角度理解他们之间的关系，我在这边再重新总结，并提合并成一篇文章。&lt;/p&gt;
+&lt;p&gt;理解所有这些问题，首先要搞清楚的是：&lt;/p&gt;
+&lt;h3 id=&quot;前后
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>MVC及其递归性和MVC变种</title>
@@ -136,9 +200,9 @@
       <category term="服务器" scheme="http://blog.3gcnbeta.com/categories/nodejs/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
     
     
-      <category term="nodejs" scheme="http://blog.3gcnbeta.com/tags/nodejs/"/>
-    
       <category term="服务器" scheme="http://blog.3gcnbeta.com/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    
+      <category term="nodejs" scheme="http://blog.3gcnbeta.com/tags/nodejs/"/>
     
       <category term="npm" scheme="http://blog.3gcnbeta.com/tags/npm/"/>
     
@@ -1257,29 +1321,6 @@
   </entry>
   
   <entry>
-    <title>Openshift git push 过程过慢的解决办法</title>
-    <link href="http://blog.3gcnbeta.com/2013/12/29/openshift-git-push-%E8%BF%87%E7%A8%8B%E8%BF%87%E6%85%A2%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/"/>
-    <id>http://blog.3gcnbeta.com/2013/12/29/openshift-git-push-过程过慢的解决办法/</id>
-    <published>2013-12-28T16:00:00.000Z</published>
-    <updated>2016-03-31T03:42:36.934Z</updated>
-    
-    <content type="html">&lt;p&gt;使用Open shift hot deploy 加速应用的启动。代码如下：&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ cd applicationName/.openshift/markers&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ touch hot_deploy&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ git add hot_deploy&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ git commit -m &amp;quot;Adding hot deployment marker&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ git push&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;使用Open shift hot deploy 加速应用的启动。代码如下：&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;
-    
-    </summary>
-    
-      <category term="Shell" scheme="http://blog.3gcnbeta.com/categories/Shell/"/>
-    
-    
-  </entry>
-  
-  <entry>
     <title>关于加速jQuery Mobile的思考</title>
     <link href="http://blog.3gcnbeta.com/2013/12/29/%E5%85%B3%E4%BA%8E%E5%8A%A0%E9%80%9Fjquery-mobile%E7%9A%84%E6%80%9D%E8%80%83/"/>
     <id>http://blog.3gcnbeta.com/2013/12/29/关于加速jquery-mobile的思考/</id>
@@ -1332,6 +1373,29 @@
       <category term="APP" scheme="http://blog.3gcnbeta.com/tags/APP/"/>
     
       <category term="jQuery Mobile" scheme="http://blog.3gcnbeta.com/tags/jQuery-Mobile/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Openshift git push 过程过慢的解决办法</title>
+    <link href="http://blog.3gcnbeta.com/2013/12/29/openshift-git-push-%E8%BF%87%E7%A8%8B%E8%BF%87%E6%85%A2%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/"/>
+    <id>http://blog.3gcnbeta.com/2013/12/29/openshift-git-push-过程过慢的解决办法/</id>
+    <published>2013-12-28T16:00:00.000Z</published>
+    <updated>2016-03-31T03:42:36.934Z</updated>
+    
+    <content type="html">&lt;p&gt;使用Open shift hot deploy 加速应用的启动。代码如下：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ cd applicationName/.openshift/markers&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ touch hot_deploy&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ git add hot_deploy&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ git commit -m &amp;quot;Adding hot deployment marker&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ git push&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;使用Open shift hot deploy 加速应用的启动。代码如下：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;
+    
+    </summary>
+    
+      <category term="Shell" scheme="http://blog.3gcnbeta.com/categories/Shell/"/>
+    
     
   </entry>
   
@@ -2344,27 +2408,6 @@
     </summary>
     
       <category term="新闻" scheme="http://blog.3gcnbeta.com/categories/%E6%96%B0%E9%97%BB/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Linux 下批量替换的命令</title>
-    <link href="http://blog.3gcnbeta.com/2011/10/18/linux-%E4%B8%8B%E6%89%B9%E9%87%8F%E6%9B%BF%E6%8D%A2%E7%9A%84%E5%91%BD%E4%BB%A4/"/>
-    <id>http://blog.3gcnbeta.com/2011/10/18/linux-下批量替换的命令/</id>
-    <published>2011-10-17T16:00:00.000Z</published>
-    <updated>2016-03-31T03:42:36.934Z</updated>
-    
-    <content type="html">&lt;p&gt;将下面的代码放到一个shell文件a.sh里，&lt;/p&gt;&lt;br&gt;&lt;p&gt;sed -i “s/$2/$3/g” &lt;code&gt;grep -rl $2 $1&lt;/code&gt;&lt;/p&gt;&lt;br&gt;&lt;p&gt;然后执行:&lt;br&gt;&lt;br&gt;sh a.sh path param1 param2&lt;/p&gt;&lt;br&gt;&lt;p&gt;path是路径名,&lt;br&gt;&lt;br&gt;param1是要替换的内容&lt;br&gt;&lt;br&gt;param2是替换后的内容&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;将下面的代码放到一个shell文件a.sh里，&lt;/p&gt;&lt;br&gt;&lt;p&gt;sed -i “s/$2/$3/g” &lt;code&gt;grep -rl $2 $1&lt;/code&gt;&lt;/p&gt;&lt;br&gt;&lt;p&gt;然后执行:&lt;br&gt;&lt;br&gt;sh a.sh path param1 param2&lt;/p&gt;&lt;br
-    
-    </summary>
-    
-      <category term="Shell" scheme="http://blog.3gcnbeta.com/categories/Shell/"/>
     
     
   </entry>
